@@ -1,0 +1,10 @@
+Description:
+    Initalizes an openshift app and generates a `dist` folder and pushes it to openshift.
+
+Example:
+    ```
+    yo makeme:openshift
+    ```
+
+    This will create:
+        a dist folder and initialize an openshift app
