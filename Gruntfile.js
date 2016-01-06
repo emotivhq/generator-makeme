@@ -1,3 +1,20 @@
+/* ***********************************
+  * $ grunt tasks:
+  * 
+  * $ grunt release           - 'stage', 'release'
+  * $ grunt stage             - git add files before running the release task
+  * $ grunt updateSubmodules  - updates submodules (ie - angular-fullstack-deps)
+  * $ grunt generateDemo      - generate demo app
+  * $ grunt releaseDemoBuild  - builds and releases demo
+  * $ grunt updateFixtures    - updates package and bower fixtures
+  * $ grunt test              - gee, i wonder.
+  * $ grunt deps              - update dependencies
+  * $ grunt demo              - clean and run generateDemo
+  * $ grunt releaseDemo       - release the kraken!
+  *
+  * ***********************************
+*/
+  
 'use strict';
 
 var shell = require('shelljs');
@@ -46,8 +63,8 @@ module.exports = function (grunt) {
         beforeBump: ['updateSubmodules'],
         afterBump: ['updateFixtures:deps', 'commitNgFullstackDeps'],
         beforeRelease: ['stage'],
-        push: false,
-        pushTags: false,
+        push: true,
+        pushTags: true,
         npm: false
       }
     },
@@ -73,7 +90,7 @@ module.exports = function (grunt) {
         commit: true,
         push: true,
         connectCommits: false,
-        message: 'Built using Angular Fullstack v<%= pkg.version %> from commit %sourceCommit%'
+        message: 'Built using Makeme - Fullstack Anglar/Express/Node/Mongo/Socket v<%= pkg.version %> from commit %sourceCommit%'
       },
       release: {
         options: {
@@ -119,7 +136,7 @@ module.exports = function (grunt) {
         }]
       }
     },
-    david: {
+    fixtures: {
       gen: {
         options: {}
       },
@@ -224,6 +241,7 @@ module.exports = function (grunt) {
     }
   });
 
+  
   grunt.registerTask('releaseDemoBuild', 'builds and releases demo', function () {
     var done = this.async();
 
@@ -260,6 +278,7 @@ module.exports = function (grunt) {
     function gruntRelease() {
       return run('grunt buildcontrol:heroku');
     }
+    
   });
 
   grunt.registerTask('updateFixtures', 'updates package and bower fixtures', function(target) {
@@ -321,7 +340,7 @@ module.exports = function (grunt) {
 
   grunt.registerTask('deps', function(target) {
     if (!target || target === 'app') grunt.task.run(['updateFixtures']);
-    grunt.task.run(['david:' + (target || '')]);
+    grunt.task.run(['fixtures:' + (target || '')]);
   });
 
   grunt.registerTask('demo', [
@@ -335,5 +354,5 @@ module.exports = function (grunt) {
     'buildcontrol:release'
   ]);
 
-  //grunt.registerTask('default', ['bump', 'changelog', 'stage', 'release']);
+  grunt.registerTask('default', ['stage', 'release']);
 };
