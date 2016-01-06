@@ -1,43 +1,132 @@
-# Makeme - An Angular/Express/Node Full-Stack Generator
+
+     _____  _    _          _   __               _   __                             __       _    
+    |_   _|/ |_ | |        / |_[  |             / |_[  |                           [  |     / |_  
+      | | `| |-'\_|.--.   `| |-'| |--.  .---.  `| |-'| |--.   .--.   __   _   .--./)| |--. `| |-' 
+      | |  | |    ( (`\]   | |  | .-. |/ /__\\  | |  | .-. |/ .'`\ \[  | | | / /'`\;| .-. | | |   
+     _| |_ | |,    `'.'.   | |, | | | || \__.,  | |, | | | || \__. | | \_/ |,\ \._//| | | | | |,  
+    |_____|\__/   [\__) )  \__/[___]|__]'.__.'  \__/[___]|__]'.__.'  '.__.'_/.',__`[___]|__]\__/  
+      _   __              _                                      _          ( ( __))              
+     / |_[  |            / |_                                   / |_                              
+    `| |-'| |--.   ,--. `| |-'  .---.   .--.   __   _   _ .--. `| |-'.--.                         
+     | |  | .-. | `'_\ : | |   / /'`\]/ .'`\ \[  | | | [ `.-. | | | ( (`\]                        
+     | |, | | | | // | |,| |,  | \__. | \__. | | \_/ |, | | | | | |, `'.'.  _                     
+     \__/[___]|__]\'-;__/\__/  '.___.' '.__.'  '.__.'_/[___||__]\__/[\__) )(_)                    
+                                                                                              
+    ----------------------------------------------------------------- 
+
+
+# `Makeme` - A Universal Javascript generator for #coolkids 
+`Makeme` is a universal javascript stack generator for Yeoman - featuring Angular, Express, Node, Mongo and Socket. 
+
+## GyShiDo with `makeme`
+To get shit done, here's a quick list of useful info. 
+
+#### Table of Contents
+
+1. [Universal Javascript](#Welcome-to-Universal-Javascript) with Angular
+2. [Setting Up](#setting-up)
+3. [Supported Configurations](#supported-configurations)
+4. [Project Structure](#project-structure)
+5. [Typical workflows](#typical-workflows)
+6. [Gulp tasks](#gulp-tasks)
+7. [Bower components](#bower-components)
+8. → [Generators](./app/templates/docs/generators.md) docs 
+9. → [Testing](./app/templates/docs/testing.md) docs
+10. → [Deployment](./app/templates/docs/deploy.md) docs
+11. [Changelog](#changelog)
+12. [Upgrade](#upgrade)
+
+<img src="http://yeoman.io/static/illustration-home-inverted.1f863f34ba.png" width="500px">
+
+---
+
+<img src="http://www.w3schools.com/angular/pic_angular.jpg" width="50px"><img src="http://ionicframework.com/img/ionic-logo-blog.png" width="50px"><img src="http://www.codingpedia.org/wp-content/uploads/2014/04/gulp-2x.png" width="50px"><img src="https://avatars.githubusercontent.com/mcfly-io?s=128" width="50px"><img src="http://www.semantic-ui.cn/images/logo.png" width="50px"><img src="https://wordimpress.com/assets/icon-grunt.png" width="50px"><img src="http://yeoman.io/static/yeoman-02.dc21b7fc1d.png" width="50px"><img src="http://images.frandroid.com/wp-content/uploads/2012/05/cordova_bot.png" width="50px">
+
+---
+
+Yeoman generator for creating MEAN stack applications, using MongoDB, Express, AngularJS, and Node - lets you quickly set up a project following best practices.
+
+Built on:
 ![Build Status](https://codeship.com/projects/26128390-800a-0133-c5f7-6a23b0487a18/status?branch=master)
-[![npm version](https://badge.fury.io/js/generator-makeme.svg)](http://badge.fury.io/js/generator-makeme)
-[![Dependency Status](https://david-dm.org/makeme/generator-makeme.svg)](https://david-dm.org/makeme/generator-makeme)
-[![Dev-Dependency Status](https://david-dm.org/makeme/generator-makeme/dev-status.svg)](https://david-dm.org/makeme/generator-makeme#info=devDependencies)
-[![Gitter chat](https://badges.gitter.im/DaftMonk/generator-makeme.svg)](https://gitter.im/DaftMonk/generator-makeme)
-> Yeoman generator for creating MEAN stack applications, using MongoDB, Express, AngularJS, and Node - lets you quickly set up a project following best practices.
+[![npm version](https://badge.fury.io/js/generator-angular-fullstack.svg)](http://badge.fury.io/js/generator-angular-fullstack)
+[![Dependency Status](https://david-dm.org/angular-fullstack/generator-angular-fullstack.svg)](https://david-dm.org/angular-fullstack/generator-angular-fullstack)
+[![Dev-Dependency Status](https://david-dm.org/angular-fullstack/generator-angular-fullstack/dev-status.svg)](https://david-dm.org/angular-fullstack/generator-angular-fullstack#info=devDependencies)
+[![Gitter chat](https://badges.gitter.im/DaftMonk/generator-angular-fullstack.svg)](https://gitter.im/DaftMonk/generator-angular-fullstack) 
 
-#### Generated project: 
-[![Dependency Status](https://david-dm.org/angular-fullstack/angular-fullstack-deps.svg)](https://david-dm.org/angular-fullstack/angular-fullstack-deps)
-[![Dev-Dependency Status](https://david-dm.org/angular-fullstack/angular-fullstack-deps/dev-status.svg)](https://david-dm.org/angular-fullstack/angular-fullstack-deps#info=devDependencies)
 
-## Usage
 
-Install `yo`, `grunt-cli`, `gulp`, `bower`, and `generator-makeme`:
+---
+
+## Welcome to Universal Javascript
+![](https://cdn-images-1.medium.com/max/1600/1*pkA5znpcqqmIwZRXesioGA.png)
+Javascript that can run both in the client (browser) and server (ie - [Node.js](https://nodejs.org/)) is here...[read more about it here](https://medium.com/@mjackson/universal-javascript-4761051b7ae9).
+
+### FullStack Generator
+This `yeoman` universal javascript application stack generator features [Angular](https://angular.io/), [Express](http://expressjs.com), [Node](https://nodejs.org/en/), [Mongo](https://www.mongodb.org/), [Socket](http://socket.io/), and more.
+
+Here are some of the main capabilities:
+
+* Angular best practices ([`component`](http://www.johnpapa.net/angular-growth-structure/)/[`feature`](http://www.johnpapa.net/angular-growth-structure/) folder structure)
+* SASS AND LESS enabled
+* [`jshint`](http://jshint.com/), [`jscsc`](http://jscs.info/), [`eslint`](http://eslint.org/) enabled for better quality code
+* [Karma](https://karma-runner.github.io/) configured with [Code Coverage](https://karma-runner.github.io/0.8/config/coverage.html)
+* [Protractor](http://www.protractortest.org/) E2E Angular testing
+* [Browser-sync](https://www.browsersync.io/) for synchronised browser testing
+* Continuous integration with [Travic CI](https://travis-ci.org/giftstarter/generator-makeme)
+* [TestFairy](http://testfairy.com/) publishing for mobile testing
+* [ES6](http://www.es6js.com/)/[7](https://developer.mozilla.org/en-US/docs/Web/JavaScript/New_in_JavaScript/ECMAScript_7_support_in_Mozilla) supported by using [`the babel`](https://babeljs.io/)
+
+---
+
+> **NOTE:**   
+> This uses [generator-fullstack-deps](https://github.com/angular-fullstack/angular-fullstack-deps) to scaffold common dependencies
+
+## Setting up
+In order to get the best experience, you have to install a couple of global npm packages, like Gulp, Yemoan, and more. 
+
+### Prerequisites
+
+- [Git](https://git-scm.com/)
+- [Node.js and npm](nodejs.org) Node ^4.2.3, npm ^2.14.7
+- [Bower](bower.io) (`npm install --global bower`)
+- [Gulp](http://gulpjs.com/) (`npm install --global gulp`)
+- [MongoDB](https://www.mongodb.org/) - Keep a running daemon with `mongod`
+
+
+### Auto install
+Execute the following command:
+
 ```
-npm install -g yo grunt-cli gulp bower generator-makeme
+$ npm install -g yo gulp bower makeme
 ```
 
-Make a new directory, and `cd` into it:
-```
-mkdir my-new-project && cd $_
-```
 
-Run `yo makeme`, optionally passing an app name:
-```
-yo makeme [app-name]
-```
+This will install, among others, the following packages globally:
 
-Run `grunt` for building, `grunt serve` for preview, and `grunt serve:dist` for a preview of the built app.
+* gulp
+* yeoman
+* bower
+* makeme generator
 
-## Prerequisites
 
-* MongoDB - Download and Install [MongoDB](http://www.mongodb.org/downloads) - If you plan on scaffolding your project with mongoose, you'll need mongoDB to be installed and have the `mongod` process running.
+#### A few things to note:
+
+1. If you have issues (like `$ yo: command not found`) - first run `npm install -g yo` & `npm install --global gulp`
+2. If you have existing project modify the name of the generator in your `.yo-rc.json` file 
+3. If you need to update Node, do this:
+  1. `npm cache clean -f`
+  2. Install [nvm](https://github.com/creationix/nvm#install-script)
+  3. `nvm install 4.2.4`
+  4. `nvm alias default 4.2.4`
+  5. `nvm use 4.2.4`
+
+---
 
 ## Supported Configurations
 
 **General**
 
-* Build Systems: `Grunt`, `Gulp` (experimental)
+* Build Systems: `Grunt`, `Gulp` 
 * Testing: 
   * `Jasmine`
   * `Mocha + Chai + Sinon`
@@ -51,7 +140,7 @@ Run `grunt` for building, `grunt serve` for preview, and `grunt serve:dist` for 
 * Markup:  `HTML`, `Jade`
 * Stylesheets: `CSS`, `Stylus`, `Sass`, `Less`
 * Angular Routers: `ngRoute`, `ui-router`
-* CSS Frameworks: `Bootstrap`
+* CSS Frameworks: `Material`, `Bootstrap`
   * Option to include `UI Bootstrap`
 
 **Server**
@@ -64,9 +153,57 @@ Run `grunt` for building, `grunt serve` for preview, and `grunt serve:dist` for 
     * oAuth integrations: `Facebook` `Twitter` `Google`
     * Socket.io integration: `Yes`, `No`
 
-## Injection
+### Configuration
+The generated projects can be further tweaked according to your needs by modifying project files appropriately.
 
-A grunt task looks for new files in your `client/app` and `client/components` folder and automatically injects them in the appropriate places based on an injection block.
+An editable `.yo-rc` file is generated for helping to copy configurations across projects, and to allow you to keep track of settings.
+
+
+## Project Structure
+
+#### Base structure
+
+    ├── client
+    │   ├── app                 - All app specific components go in here
+    │   ├── assets              - Custom assets: fonts, images, etc…
+    │   ├── components          - Reusable components, non-specific to this app
+    │
+    ├── e2e                     - Protractor end to end tests
+    │
+    └── server
+        ├── api                 - Local server api
+        ├── auth                - For handling authentication with different auth strategies
+        ├── components          - Reusable or app-wide components
+        ├── config              - App configurations
+        │   └── local.env.js    - Keep environment variables out of source control
+        │   └── environment     - Configuration specific to the node environment
+        └── views               - Server rendered views
+
+#### An example client component in `client/app`
+
+    main
+    ├── main.js                 - Routes
+    ├── main.controller.js      - Controller for our main route
+    ├── main.controller.spec.js - Test
+    ├── main.html               - View
+    └── main.less               - Styles
+
+#### An example server component in `server/api`
+
+    thing
+    ├── index.js                - Routes
+    ├── thing.controller.js     - Controller for our `thing` endpoint
+    ├── thing.model.js          - Database model
+    ├── thing.socket.js         - Register socket events
+    └── thing.spec.js           - Test
+
+### Environment Variables
+
+Keeping the app secrets and other sensitive information in source control isn't a good idea. To have `gulp` (or `grunt`) launch the app with specific environment variables, add them to the git ignored environment config file: `server/config/local.env.js`.
+
+### Injection
+
+A `gulp` task looks for new files in your `client/app` and `client/components` folder and automatically injects them in the appropriate places based on an injection block.
 
 * `less` files into `client/app/app.less`
 * `scss` files into `client/app/app.scss`
@@ -75,271 +212,72 @@ A grunt task looks for new files in your `client/app` and `client/components` fo
 * `js` files into `client/index.html`
 * `babel` temp `js` files into `client/index.html`
 
-## Generators
 
-Available generators:
 
-* App
-    - [makeme](#app) (aka [makeme:app](#app))
-* Server Side
-    - [makeme:endpoint](#endpoint)
-* Client Side
-    - [makeme:route](#route)
-    - [makeme:controller](#controller)
-    - [makeme:filter](#filter)
-    - [makeme:directive](#directive)
-    - [makeme:service](#service)
-    - [makeme:provider](#service)
-    - [makeme:factory](#service)
-    - [makeme:decorator](#decorator)
-* Deployment
-    - [makeme:openshift](#openshift)
-    - [makeme:heroku](#heroku)
+## Typical workflows
+These are all available in the already provided apps, or inside any new apps you build.
 
-### App
-Sets up a new AngularJS + Express app, generating all the boilerplate you need to get started.
 
-Usage:
-```bash
-Usage:
-  yo makeme:app [options] [<name>]
+1. **Develop with existing code**
+ - `$ gulp serve` to start the app in `watch` mode
+ - Do some `coding` that is amazing
+ - `$ gulp test` to run the client & server unit tests with `karma` and `mocha`
+ - View changes in a ***c9*** tab or new browser tab 
+     - Click the `Preview` button in the top menu
+     - Or, go to https://gs-web-username.c9.io
+ - `$ gulp` to build the `client` app into the **`dist`** folder
+ - `$ gulp buildcontrol:heroku` to push changes to Heroku server
+2. **Develop a new component (module, controller, factory, etc)**
+ - `$ yo makeme:route newModuleName`
+ - `$ yo makeme:controller newControllerName`
+ - [?] Where would you like to create this controller? `client/app/newModuleName`
+ - `$ gulp serve` to start the app in `watch` mode
+ - Do some `coding` that is amazing
+ - `$ gulp test` to run the client & server unit tests with `karma` and `mocha`
+ - View changes in a ***c9*** tab or new browser tab 
+     - Click the `Preview` button in the top menu
+     - Or, go to https://gs-web-username.c9.io
+ - `$ gulp` to build the `client` app into the **`dist`** folder
+ - `$ gulp buildcontrol:heroku` to push changes to Heroku server
 
-Options:
-  -h,   --help          # Print the generator's options and usage
-        --skip-cache    # Do not remember prompt answers                        Default: false
-        --skip-install  # Do not install dependencies                           Default: false
-        --app-suffix    # Allow a custom suffix to be added to the module name  Default: App
-        --gulp          # Use the experimental Gulp config instead of Grunt     Default: false
 
-Arguments:
-  name    Type: String  Required: false
+
+#### - To see more, check out the [Generator docs](./docs/generators.md).
+
+
+
+## Gulp tasks
+Here is a set of simple gulp tasks available:
+```
+gulp                # Build the app
+gulp serve          # Load the app in preview mode
+gulp serve:debug	# Load a more debugging-friendly environment
+gulp dist           # Distribute the application
+------
+gulp help           # List the main gulp tasks
+gulp lint           # Run lint
+gulp test           # Run lint, unit tests, and e2e tests
+gulp unit           # Run lint and unit tests (karma for client + mocha for server)
+gulp karma          # Run karma client unit tests
+gulp mocha          # Run mocha server unit tests
+gulp e2e            # Run protractor for end to end tests
+gulp style          # Generate a main.css file
 ```
 
-Example:
-```bash
-yo makeme
-```
-
-### Endpoint
-Generates a new API endpoint.
-
-Usage:
-```bash
-Usage:
-  yo makeme:endpoint [options] <name>
-
-Options:
-  -h,   --help               # Print the generator's options and usage
-        --skip-cache         # Do not remember prompt answers           Default: false
-        --route              # URL for the endpoint
-        --models             # Specify which model(s) to use
-        --endpointDirectory  # Parent directory for enpoints
-
-Arguments:
-  name    Type: String  Required: true
-```
-
-Example:
-```bash
-yo makeme:endpoint message
-[?] What will the url of your endpoint be? /api/messages
-```
-
-Produces:
-
-    server/api/message/index.js
-    server/api/message/index.spec.js
-    server/api/message/message.controller.js
-    server/api/message/message.integration.js
-    server/api/message/message.model.js  (optional)
-    server/api/message/message.events.js (optional)
-    server/api/message/message.socket.js (optional)
-
-### Route
-Generates a new route.
-
-Example:
-```bash
-yo makeme:route myroute
-[?] Where would you like to create this route? client/app/
-[?] What will the url of your route be? /myroute
-```
-
-Produces:
-
-    client/app/myroute/myroute.js
-    client/app/myroute/myroute.controller.js
-    client/app/myroute/myroute.controller.spec.js
-    client/app/myroute/myroute.html
-    client/app/myroute/myroute.scss
 
 
-### Controller
-Generates a controller.
+## Running the server
+Here are the main ways of running the app, which includes both an Express server, MongoDB server, and an Angular client app.
 
-Example:
-```bash
-yo makeme:controller user
-[?] Where would you like to create this controller? client/app/
-```
+1. Open `server/index.js` and start the app by clicking on the `Run` button in the top menu.
+2. Alternatively you can launch the app from the `Terminal`:
 
-Produces:
-
-    client/app/user/user.controller.js
-    client/app/user/user.controller.spec.js
-
-### Directive
-Generates a directive.
-
-Example:
-```bash
-yo makeme:directive myDirective
-[?] Where would you like to create this directive? client/app/
-[?] Does this directive need an external html file? Yes
-```
-
-Produces:
-
-    client/app/myDirective/myDirective.directive.js
-    client/app/myDirective/myDirective.directive.spec.js
-    client/app/myDirective/myDirective.html
-    client/app/myDirective/myDirective.scss
-
-**Simple directive without an html file**
-
-Example:
-```bash
-yo makeme:directive simple
-[?] Where would you like to create this directive? client/app/
-[?] Does this directive need an external html file? No
-```
-
-Produces:
-
-    client/app/simple/simple.directive.js
-    client/app/simple/simple.directive.spec.js
-
-### Filter
-Generates a filter.
-
-Example:
-```bash
-yo makeme:filter myFilter
-[?] Where would you like to create this filter? client/app/
-```
-
-Produces:
-
-    client/app/myFilter/myFilter.filter.js
-    client/app/myFilter/myFilter.filter.spec.js
-
-### Service
-Generates an AngularJS service.
-
-Example:
-```bash
-yo makeme:service myService
-[?] Where would you like to create this service? client/app/
-```
-
-Produces:
-
-    client/app/myService/myService.service.js
-    client/app/myService/myService.service.spec.js
-
-
-You can also do `yo makeme:factory` and `yo makeme:provider` for other types of services.
-
-### Decorator
-Generates an AngularJS service decorator.
-
-Example:
-```bash
-yo makeme:decorator serviceName
-[?] Where would you like to create this decorator? client/app/
-```
-
-Produces
-
-    client/app/serviceName/serviceName.decorator.js
-
-###Openshift
-
-Deploying to OpenShift can be done in just a few steps:
-
-    yo makeme:openshift
-
-A live application URL will be available in the output.
-
-> **oAuth**
->
-> If you're using any oAuth strategies, you must set environment variables for your selected oAuth. For example, if we're using Facebook oAuth we would do this :
->
->     rhc set-env FACEBOOK_ID=id -a my-openshift-app
->     rhc set-env FACEBOOK_SECRET=secret -a my-openshift-app
->
-> You will also need to set `DOMAIN` environment variable:
->
->     rhc set-env DOMAIN=<your-openshift-app-name>.rhcloud.com
->
->     # or (if you're using it):
->
->     rhc set-env DOMAIN=<your-custom-domain>
->
-> After you've set the required environment variables, restart the server:
->
->     rhc app-restart -a my-openshift-app
-
-To make your deployment process easier consider using [grunt-build-control](https://github.com/robwierzbowski/grunt-build-control).
-
-**Pushing Updates**
-
-    grunt
-
-Commit and push the resulting build, located in your dist folder:
-
-    grunt buildcontrol:openshift
-
-### Heroku
-
-Deploying to heroku only takes a few steps.
-
-    yo makeme:heroku
-
-To work with your new heroku app using the command line, you will need to run any `heroku` commands from the `dist` folder.
-
-
-If you're using mongoDB you will need to add a database to your app:
-
-    heroku addons:create mongolab
-
-Your app should now be live. To view it run `heroku open`.
-
->
-> If you're using any oAuth strategies, you must set environment variables for your selected oAuth. For example, if we're using **Facebook** oAuth we would do this :
->
->     heroku config:set FACEBOOK_ID=id
->     heroku config:set FACEBOOK_SECRET=secret
->
-> You will also need to set `DOMAIN` environment variable:
->
->     heroku config:set DOMAIN=<your-heroku-app-name>.herokuapp.com
->
->     # or (if you're using it):
->
->     heroku config:set DOMAIN=<your-custom-domain>
->
-
-To make your deployment process easier consider using [grunt-build-control](https://github.com/robwierzbowski/grunt-build-control).
-
-#### Pushing Updates
-
-    grunt
-
-Commit and push the resulting build, located in your dist folder:
-
-    grunt buildcontrol:heroku
-
+    - `$ gulp serve` to preview
+    - `$ gulp serve:dist` to preview the built app
+    - `$ gulp serve:debug` to run the app in debug mode
+    - `$ node server/index` to run the production version of the app
+    
+Once the server is running, open the project in the shape of `https://projectname-username.c9.io:3001`
 
 ## Bower Components
 
@@ -362,93 +300,46 @@ These packages are installed optionally depending on your configuration:
 * angular-ui-router
 * angular-socket-io
 * angular-bootstrap
+* angular-material
+* angular-famous
 * bootstrap
 
 All of these can be updated with `bower update` as new versions are released.
 
-## Configuration
-Yeoman generated projects can be further tweaked according to your needs by modifying project files appropriately.
+### Adding Bower packages
+You should always prefer an `npm` package instead of a `bower` package. Most of client side libraries nowadays exist as both npm and bower packages. But sometimes it is not the case and you have to deal with a bower package. Here's how to do it elegantly.
 
-A `.yo-rc` file is generated for helping you copy configuration across projects, and to allow you to keep track of your settings. You can change this as you see fit.
+To include a third party `bower` package do the following:
 
-## Testing
+* `bower install --save thepackage`
+* modify `package.json` `browser` section to include a path to the global minified javascript file of the package
+* if the package exposes a global `.scss` file import it into `client/styles/main.scss` and ajdust eventually the variable for the path font (should be `../fonts`)
+* if the package only exposes a `.css` file adjust the **css** file constants (`gulp/common/constants.js`) to include it
+* if the package relies on other libraries
+  * Either add a browser-shim section 
+  * Or make sure to require the dependencies in the code just before you `require` the package.
+  * 
+## Changelog
 
-Running `grunt test` will run the client and server unit tests with karma and mocha.
+Recent changes can be viewed on Github on the [Releases Page](https://github.com/giftstarter/makeme/releases)
 
-Use `grunt test:server` to only run server tests.
 
-Use `grunt test:client` to only run client tests.
+## Upgrade
+Here is the core generator upgrade process.
 
-**Protractor tests**
-
-To setup protractor e2e tests, you must first run
-
-`npm run update-webdriver`
-
-Use `grunt test:e2e` to have protractor go through tests located in the `e2e` folder.
-
-**Code Coverage**
-
-Use `grunt test:coverage` to run mocha-istanbul and generate code coverage reports.
-
-`coverage/server` will be populated with `e2e` and `unit` folders containing the `lcov` reports.
-
-The coverage taget has 3 available options:
-- `test:coverage:unit` generate server unit test coverage
-- `test:coverage:e2e` generate server e2e test coverage
-- `test:coverage:check` combine the coverage reports and check against predefined thresholds
-
-* *when no option is given `test:coverage` runs all options in the above order*
-
-**Debugging**
-
-Use `grunt serve:debug` for a more debugging-friendly environment.
-
-## Environment Variables
-
-Keeping your app secrets and other sensitive information in source control isn't a good idea. To have grunt launch your app with specific environment variables, add them to the git ignored environment config file: `server/config/local.env.js`.
-
-## Project Structure
-
-Overview
-
-    ├── client
-    │   ├── app                 - All of our app specific components go in here
-    │   ├── assets              - Custom assets: fonts, images, etc…
-    │   ├── components          - Our reusable components, non-specific to to our app
-    │
-    ├── e2e                     - Our protractor end to end tests
-    │
-    └── server
-        ├── api                 - Our apps server api
-        ├── auth                - For handling authentication with different auth strategies
-        ├── components          - Our reusable or app-wide components
-        ├── config              - Where we do the bulk of our apps configuration
-        │   └── local.env.js    - Keep our environment variables out of source control
-        │   └── environment     - Configuration specific to the node environment
-        └── views               - Server rendered views
-
-An example client component in `client/app`
-
-    main
-    ├── main.js                 - Routes
-    ├── main.controller.js      - Controller for our main route
-    ├── main.controller.spec.js - Test
-    ├── main.html               - View
-    └── main.less               - Styles
-
-An example server component in `server/api`
-
-    thing
-    ├── index.js                - Routes
-    ├── thing.controller.js     - Controller for our `thing` endpoint
-    ├── thing.model.js          - Database model
-    ├── thing.socket.js         - Register socket events
-    └── thing.spec.js           - Test
+**1:**
+```bash
+npm update -g generator-makeme
+```
+**2:**
+```bash
+git pull github master
+```
+from [makeme](https://github.com/giftstarter/makeme)
 
 ## Contribute
 
-See the [contributing docs](https://github.com/DaftMonk/generator-makeme/blob/master/contributing.md)
+See the [contributing docs](https://github.com/giftstarter/generator-makeme/blob/master/contributing.md)
 
 This project has 2 main branches: `master` and `canary`. The `master` branch is where the current stable code lives and should be used for production setups. The `canary` branch is the main development branch, this is where PRs should be submitted to (backport fixes may be applied to `master`).
 
@@ -466,4 +357,4 @@ See the `travis.yml` for configuration required to run tests.
 
 ## License
 
-[BSD license](http://opensource.org/licenses/bsd-license.php)
+[BSD license](http://opensource.org/licenses/bsd-license.php) from [angular-fullstack](https://github.com/angular-fullstack/generator-angular-fullstack/blob/master/readme.md#license)
