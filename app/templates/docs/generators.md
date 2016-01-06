@@ -29,10 +29,10 @@ Usage:
 
 Options:
   -h,   --help          # Print the generator's options and usage
+        --gulp          # Use the Gulp config instead of Grunt                  Default: false
         --skip-cache    # Do not remember prompt answers                        Default: false
         --skip-install  # Do not install dependencies                           Default: false
         --app-suffix    # Allow a custom suffix to be added to the module name  Default: App
-        --gulp          # Use the experimental Gulp config instead of Grunt     Default: false
 
 Arguments:
   name    Type: String  Required: false
@@ -40,7 +40,7 @@ Arguments:
 
 Example:
 ```bash
-yo makeme
+yo makeme new-app --gulp
 ```
 
 ## Endpoint

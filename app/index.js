@@ -2,7 +2,7 @@
 
 // Register the Babel require hook
 require('babel-core/register')({
-  only: /generator-angular-fullstack\/(?!node_modules)/
+  only: /generator-makeme\/(?!node_modules)/
 });
 
 // Export the generator
