@@ -407,7 +407,8 @@ gulp.task('wiredep:client', () => {
                 /json3/,
                 /es5-shim/,
                 /bootstrap.css/,
-                /font-awesome.css/
+                /font-awesome.css/,
+                /angular-material.css/
             ],
             ignorePath: clientPath
         }))

@@ -1,7 +1,7 @@
 /* ***********************************
   * $ grunt tasks:
   * 
-  * $ grunt release           - 'stage', 'release'
+  * $ grunt releaseme           - 'stage', 'release'
   * $ grunt stage             - git add files before running the release task
   * $ grunt updateSubmodules  - updates submodules (ie - angular-fullstack-deps)
   * $ grunt generateDemo      - generate demo app
@@ -354,5 +354,5 @@ module.exports = function (grunt) {
     'buildcontrol:release'
   ]);
 
-  grunt.registerTask('default', ['stage', 'release']);
+  grunt.registerTask('releaseme', ['stage', 'release']);
 };

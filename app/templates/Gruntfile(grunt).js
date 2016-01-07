@@ -246,7 +246,7 @@ module.exports = function (grunt) {
     // Automatically inject Bower components into the app and karma.conf.js
     wiredep: {
       options: {
-        exclude: [<% if(filters.uibootstrap) { %>
+        exclude: [<% if(filters.material) { %>/angular-material\.css/, <% } %><% if(filters.uibootstrap) { %>
           /bootstrap.js/,<% } %>
           '/json3/',
           '/es5-shim/'<% if(!filters.css) { %>,

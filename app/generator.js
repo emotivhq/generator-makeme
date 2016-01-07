@@ -125,8 +125,10 @@ export default class Generator extends Base {
           }, {
             type: 'confirm',
             name: 'material',
-            message: 'Would you like to include Angular Material?'
-          }, {
+            message: 'Would you like to include Angular Material?',
+            when: function (answers) {
+              return answers.material;
+            }
           }, {
             type: 'confirm',
             name: 'bootstrap',
