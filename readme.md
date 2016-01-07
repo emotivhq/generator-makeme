@@ -18,6 +18,10 @@
 # `Makeme` - A Universal Javascript generator for #coolkids 
 `Makeme` is a universal javascript stack generator for Yeoman - featuring Angular, Express, Node, Mongo and Socket. 
 
+[ ![Codeship Status for giftstarter/generator-makeme](https://codeship.com/projects/434a9b80-90b9-0133-623b-4e0b09ec4af6/status?branch=master)](https://codeship.com/projects/124478)
+
+> Are you looking for [**`Makeme Famous`**](https://www.npmjs.com/package/generator-makeme-famous)? 
+
 ## GyShiDo with `makeme`
 To get shit done, here's a quick list of useful info. 
 
@@ -40,7 +44,7 @@ To get shit done, here's a quick list of useful info.
 
 ---
 
-<img src="http://www.w3schools.com/angular/pic_angular.jpg" width="50px"><img src="http://ionicframework.com/img/ionic-logo-blog.png" width="50px"><img src="http://www.codingpedia.org/wp-content/uploads/2014/04/gulp-2x.png" width="50px"><img src="https://avatars.githubusercontent.com/mcfly-io?s=128" width="50px"><img src="http://www.semantic-ui.cn/images/logo.png" width="50px"><img src="https://wordimpress.com/assets/icon-grunt.png" width="50px"><img src="http://yeoman.io/static/yeoman-02.dc21b7fc1d.png" width="50px"><img src="http://images.frandroid.com/wp-content/uploads/2012/05/cordova_bot.png" width="50px">
+<img src="http://www.w3schools.com/angular/pic_angular.jpg" width="50px"><img src="https://supundharmarathne.files.wordpress.com/2013/08/nodejs.png" width="50px"><img src="http://www.codingpedia.org/wp-content/uploads/2014/04/gulp-2x.png" width="50px"><img src="https://wordimpress.com/assets/icon-grunt.png" width="50px"><img src="https://farm8.staticflickr.com/7255/7543242464_58d5d8ebae_z.jpg" width="50px"><img src="https://www.pubnub.com/blog/wp-content/uploads/2014/07/SOCKETIOICON.gif" width="50px"><img src="http://yeoman.io/static/yeoman-02.dc21b7fc1d.png" width="50px"><img src="http://chaijs.com/public/img/chai-logo.png" width="50px">
 
 ---
 

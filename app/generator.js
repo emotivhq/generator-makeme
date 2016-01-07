@@ -45,7 +45,7 @@ export default class Generator extends Base {
 
       info: function () {
         this.log(this.yoWelcome);
-        this.log('Out of the box I create an AngularJS app with an Express server.\n');
+        this.log('Welcome to MakeMe. Out of the box I create an AngularJS app with an Express server.\n');
       },
 
       checkForConfig: function() {
@@ -126,9 +126,6 @@ export default class Generator extends Base {
             type: 'confirm',
             name: 'material',
             message: 'Would you like to include Angular Material?',
-            when: function (answers) {
-              return answers.material;
-            }
           }, {
             type: 'confirm',
             name: 'bootstrap',
@@ -283,8 +280,8 @@ export default class Generator extends Base {
           choices: [ 'Jasmine', 'Mocha + Chai + Sinon'],
           filter: function( val ) {
             var filterMap = {
-              'Jasmine': 'jasmine',
-              'Mocha + Chai + Sinon': 'mocha'
+              'Mocha + Chai + Sinon': 'mocha',
+              'Jasmine': 'jasmine'
             };
 
             return filterMap[val];
@@ -399,7 +396,7 @@ export default class Generator extends Base {
         if(this.filters.ngroute) angModules.push("'ngRoute'");
         if(this.filters.socketio) angModules.push("'btford.socket-io'");
         if(this.filters.uirouter) angModules.push("'ui.router'");
-        if(this.filters.material) angModules.push("'ui.material'");
+        if(this.filters.material) angModules.push("'angular-material'");
         if(this.filters.uibootstrap) angModules.push("'ui.bootstrap'");
         if(this.filters.auth) {
           angModules.unshift(`'${this.scriptAppName}.admin'`);
