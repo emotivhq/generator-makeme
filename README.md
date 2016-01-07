@@ -20,7 +20,7 @@
 
 [ ![Codeship Status for giftstarter/generator-makeme](https://codeship.com/projects/434a9b80-90b9-0133-623b-4e0b09ec4af6/status?branch=master)](https://codeship.com/projects/124478)
 
-> Are you looking for [**`Makeme Famous`**](https://www.npmjs.com/package/generator-makeme-famous)? 
+> Are you looking for [**`Makeme Famous`**](https://www.github.com/giftstarter/generator-makeme-famous)? 
 
 ## GyShiDo with `makeme`
 To get shit done, here's a quick list of useful info. 
