@@ -1,6 +1,6 @@
 {
   "name": "generator-makeme",
-  "version": "3.2.9",
+  "version": "3.2.10",
   "description": "A Fullstack Universal Javascript Generator for #coolkids that uses Angular, Express, Node, Mongo, Socket + more",
   "keywords": [
     "yeoman-generator",
