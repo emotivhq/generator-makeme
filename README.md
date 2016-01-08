@@ -101,7 +101,7 @@ In order to get the best experience, you have to install a couple of global npm 
 Execute the following command:
 
 ```
-$ npm install -g yo gulp bower makeme
+$ npm install -g yo gulp bower generator-makeme
 ```
 
 
