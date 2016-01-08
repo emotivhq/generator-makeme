@@ -1,31 +1,36 @@
 Description:
   Create and manage a `badass` Full-Stack AngularJS + Node app
 
-Example:
-  ```
-  yo makeme
-  ```
+#### Quick help guide:
 
-Sub Generators:
+##### **Gulp:**
+```
+gulp serve
+gulp test
+gulp build
+```
+
+##### **Generators:**
 
   Server Side:
-    ```
-    makeme:endpoint
-    ```
+```
+yo makeme:endpoint
+```
 
   Client Side:
-    ```
-    makeme:route
-    makeme:controller
-    makeme:filter
-    makeme:directive
-    makeme:service
-    makeme:provider
-    makeme:factory
-    makeme:decorator
-    ```
+```
+yo makeme:route			# the module
+yo makeme:controller
+yo makeme:filter
+yo makeme:directive
+yo makeme:service
+yo makeme:provider
+yo makeme:factory
+yo makeme:decorator
+```
+
   Deployment:
-    ```
-    makeme:openshift
-    makeme:heroku
-    ```
+```
+yo makeme:openshift
+yo makeme:heroku
+```

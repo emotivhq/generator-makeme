@@ -2,22 +2,23 @@
 Main gulp tasks:
 
 ```
-gulp build          # Build the app
-gulp serve          # Load the app in preview mode
+gulp serve          # Load the application in preview mode
+gulp test           # Test the application
+gulp build          # Build the application
+```
+
+All serve tasks.
+
+```
+gulp serve          # Load the application in preview mode
 gulp serve:debug	# Load a more debugging-friendly environment
-gulp dist           # Distribute the application
+gulp serve:dist	    # Load from the built application in dist
 ```
 
-All build tasks
+All test tasks.
 
 ```
-gulp build:images   # Just build images
-gulp copy:extras	# copy extras to dist
-gulp copy:assets    # copy assets to dist
-gulp copy:server    # copy server files
-```
-All test tasks
-```
+gulp test                   # runs all tests everywhere, in the world
 gulp test:e2e               # runs end2end tests with Selenium webdriver
 gulp mocha:coverage         # runs full test coverage with Mocha (unit, integration, env, coverage)
 gulp coverage:integration   # run integration tests
@@ -25,7 +26,17 @@ gulp coverage:unit          # run unit tests
 gulp coverage:pre           # run pre tests
 ```
 
-Detailed gulp tasks
+All build & distribute tasks.
+
+```
+gulp build          # Build & distribute the application
+gulp build:images   # Just build images
+gulp copy:extras	# Copy the extras to dist
+gulp copy:assets    # Copy the assets to dist
+gulp copy:server    # Copy the server files
+```
+
+Detailed gulp tasks.
 
 ```
 gulp help           # List the main gulp tasks
@@ -41,13 +52,16 @@ gulp styles         # Generate a main app.css file
 gulp constant       # Build and inject constants
 ```
 
-Start the client & server 
+Start the client & server.
+
 ```
 gulp start:server   # start the Node/Express server
 gulp start:client   # start the local app up (no server)
 gulp watch          # the watch `command`
 ```
-Set ENV variables
+
+Set ENV variables.
+
 ```
 gulp env:all        # set local dev environment
 gulp env:test       # set the local ENV variable to `test`
