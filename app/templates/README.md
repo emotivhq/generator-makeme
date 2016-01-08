@@ -25,8 +25,9 @@ To get shit done, here's a quick list of useful info.
 3. [Supported Configurations](#supported-configurations)
 4. [Project Structure](#project-structure)
 5. [Typical workflows](#typical-workflows)
-6. [Gulp tasks](#gulp-tasks)
+6. [Main Gulp tasks](#gulp-tasks)
 7. [Bower components](#bower-components)
+8. → [Gulp](./docs/gulp.md) docs 
 8. → [Generators](./docs/generators.md) docs 
 9. → [Testing](./docs/testing.md) docs
 10. → [Deployment](./docs/deploy.md) docs
@@ -216,21 +217,12 @@ These are all available in the already provided apps, or inside any new apps you
 ## Gulp tasks
 Here is a set of simple gulp tasks available:
 ```
-gulp                # Build the app
+gulp build          # Build the app
 gulp serve          # Load the app in preview mode
-gulp serve:debug	# Load a more debugging-friendly environment
 gulp dist           # Distribute the application
-------
-gulp help           # List the main gulp tasks
-gulp lint           # Run lint
-gulp test           # Run lint, unit tests, and e2e tests
-gulp unit           # Run lint and unit tests (karma for client + mocha for server)
-gulp karma          # Run karma client unit tests
-gulp mocha          # Run mocha server unit tests
-gulp e2e            # Run protractor for end to end tests
-gulp style          # Generate a main.css file
 ```
 
+> See the [full gulp docs](./docs/gulp.md) for all of the yummy Gulp tasks. 
 
 
 ## Running the server

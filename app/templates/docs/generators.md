@@ -40,7 +40,7 @@ Arguments:
 
 Example:
 ```bash
-yo makeme new-app --gulp
+yo makeme --gulp new-app
 ```
 
 ## Endpoint

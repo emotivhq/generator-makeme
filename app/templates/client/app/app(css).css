@@ -1,3 +1,7 @@
+<% if (filters.material) { %>
+  @import url("../bower_components/angular-material/angular-material.css");
+<% } %>
+
 <% if (filters.bootstrap) { %>
 /**
  * Bootstrap Fonts
